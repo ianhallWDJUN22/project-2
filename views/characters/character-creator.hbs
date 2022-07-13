@@ -1,0 +1,62 @@
+
+<div class="form">
+<form action="/create" method="post" enctype="multipart/form-data">
+
+<label for="form-name">Choose a Name for your Character:
+    <input class="form-name" id="form-name" type="text" name="name" placeholder="Name">
+</label>
+
+<label for="form-race">
+    <select class="form-name" id="form-name" name="race" placeholder="Race">
+        <option value="n-a">- Select Race -</option>
+        <option value="Dwarf">Dwarf</option>
+        <option value="Elf">Elf</option>
+        <option value="Halfling">Halfling</option>
+        <option value="Human">Human</option>
+        <option value="Dragonborn">Dragonborn</option>
+        <option value="Gnome">Gnome</option>
+        <option value="Half-Elf">Half-Elf</option>
+        <option value="Half-Orc">Half-Orc</option>
+        <option value="Tiefling">Tiefling</option>
+    </select>
+</label>
+
+<label for="form dndclass">
+    <select name="dndclass" id="char-class" placeholder="Class">
+        <option value="n-a">- Select Class -</option>
+        <option value="Barbarian">Barbarian</option>
+        <option value="Bard">Bard</option>
+        <option value="Cleric">Cleric</option>
+        <option value="Druid">Druid</option>
+        <option value="Fighter">Fighter</option>
+        <option value="Monk">Monk</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Ranger">Ranger</option>
+        <option value="Rogue">Rogue</option>
+        <option value="Sorcerer">Sorcerer</option>
+        <option value="Warlock">Warlock</option>
+        <option value="Wizard">Wizard</option>
+    </select>
+</label>
+
+<label>Image:
+    <input type="file" name="imageFile">
+</label>
+
+<button type="submit">Create Character</button>
+
+{{#if errorMessage}}
+      <p class="error-message">{{errorMessage}}</p>
+    {{/if}}
+
+
+</form>
+</div>
+<style>
+body {
+  background-image: url('https://images.wallpaperscraft.com/image/single/blacksmith_anvil_art_hammer_sword_fire_100299_1366x768.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>

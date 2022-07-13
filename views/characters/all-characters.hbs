@@ -1,0 +1,14 @@
+<h2>Created Characters</h2>
+
+    <div class="char-display">
+        {{#each characters}}
+        <div class="char-image">
+        <img src={{this.imageUrl}} height="200px">
+        </div>
+        <div class="char-info">
+        <h4>Name: {{this.name}}</h4>
+        <p>Race:{{this.race}}</p>
+        <p>Class:{{this.dndclass}}</p>
+        </div>
+        {{/each}}
+    </div>
