@@ -1,0 +1,85 @@
+<h2>{{character.name}}</h2>
+<img src="{{character.imageUrl}}" height="400px">
+<div class="form">
+<form action="/characters/{{character._id}}/edit" method="post" 
+{{!-- enctype="multipart/form-data" --}}
+>
+
+<div class="form1">
+<label for="form-name">Name:
+    <input class="form-name" id="form-name" type="text" name="name" value="{{character.name}}">
+</label>
+</div>
+
+<div class="form2">
+<label for="form-race">
+    <select class="form-name" id="form-name" name="race" value="{{character.race}}">
+       <option value="{{character.race}}">{{character.race}}</option>
+        <option value="Dwarf">Dwarf</option>
+        <option value="Elf">Elf</option>
+        <option value="Halfling">Halfling</option>
+        <option value="Human">Human</option>
+        <option value="Dragonborn">Dragonborn</option>
+        <option value="Gnome">Gnome</option>
+        <option value="Half-Elf">Half-Elf</option>
+        <option value="Half-Orc">Half-Orc</option>
+        <option value="Tiefling">Tiefling</option>
+    </select>
+</label>
+</div>
+
+<div class="form3">
+<label for="form dndclass">
+    <select name="dndclass" id="char-class" value="{{character.dndclass}}">
+        <option value="{{character.dndclass}}">{{character.dndclass}}</option>
+        <option value="Barbarian">Barbarian</option>
+        <option value="Bard">Bard</option>
+        <option value="Cleric">Cleric</option>
+        <option value="Druid">Druid</option>
+        <option value="Fighter">Fighter</option>
+        <option value="Monk">Monk</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Ranger">Ranger</option>
+        <option value="Rogue">Rogue</option>
+        <option value="Sorcerer">Sorcerer</option>
+        <option value="Warlock">Warlock</option>
+        <option value="Wizard">Wizard</option>
+    </select>
+</label>
+</div>
+{{!-- <div class="form4">
+<label>Image:
+    <input type="file" name="imageFile" value="{{character.imageUrl}}">
+</label>
+</div> --}}
+
+<div class="form5">
+<label>Description:
+    <textarea name="description" cols="30" rows="4">{{character.description}}</textarea>
+</label>
+</div>
+
+<div class="form6">
+<label>Backstory:
+    <textarea name="backstory" cols="30" rows="4">{{character.backstory}}</textarea>
+</label>
+</div>
+
+<button type="submit">Save Changes</button>
+
+
+{{#if errorMessage}}
+      <p class="error-message">{{errorMessage}}</p>
+    {{/if}}
+
+
+</form>
+</div>
+<style>
+body {
+  background-image: url('https://images.wallpaperscraft.com/image/single/jungle_fantasy_deer_butterflies_night_trees_102121_1366x768.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>

@@ -1,15 +1,16 @@
 {{#if user}}
 <h2>Hello, {{user.username}}!</h2>
 <p> You are currently logged in</p>
-<button>
-    <a href="/user-profile">reload page</a>
-</button>
 {{else}}
     <p>User not logged in, sorry</p>
     <a href="/login">Log in</a> 
 {{/if}}
 
+<h2>My Characters:</h2>
+<a href="/create">Create New Character</a>
+
 {{#each user.characters}}
+<div class="char-block">
 <div class="char-image">
     <img src={{this.imageUrl}} height="200px">
 </div>
@@ -19,4 +20,14 @@
     <p>Class:{{this.dndclass}}</p>
     <a href="/characters/{{_id}}">Character details</a>
 </div>
+</div>
 {{/each}}
+
+<style>
+body {
+  background-image: url('https://images.wallpaperscraft.com/image/single/ships_old_wreckage_beach_sea_sky_clouds_63095_1366x768.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>

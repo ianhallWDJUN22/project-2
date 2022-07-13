@@ -13,9 +13,59 @@ const User = require("../models/User.model");
 router.get("/", (req, res, next) => {
   res.render("index");
 });
+   
+
+
+
+router.post('/characters/:characterId/delete', (req, res, next) => {
+  const { characterId } = req.params;
+
+  Character.findByIdAndDelete(characterId)
+  .then(() => res.redirect('/user-profile'))
+  .catch(error => next(error));
+})
+
+
+
+router.get('/characters/:characterId/edit', (req, res, next) => {
+  const { characterId } = req.params;
+
+  Character.findById(characterId)
+  .then(characterToEdit => {
+    res.render('characters/character-edit.hbs', { character: characterToEdit})
+  })
+  .catch(error => next(error));
+});
+
+
+router.post('/characters/:characterId/edit', (req, res, next) => {
+  const { characterId } = req.params;
+  const { 
+    name, 
+    race,
+    dndclass,
+    imageUrl, 
+    description, 
+    backstory, 
+    // imageUrl
+   } = req.body;
+    
+    Character.findByIdAndUpdate(characterId, { 
+      name, 
+      race,
+      dndclass,
+      imageUrl, 
+      description, 
+      backstory, 
+      // imageUrl 
+     },
+     {new: true})
+     .then(updatedCharacter => res.redirect(`/characters/${updatedCharacter.id}`))
+})
+
 
 router.get('/characters/:characterId', (req, res, next) => {
-
+  
 const { characterId } = req.params;
 
 Character.findById(characterId)
@@ -75,7 +125,7 @@ router.post("/create", isLoggedIn, fileUploader.single('imageFile'), (req, res, 
 })
 })
 
-router.get('/user-profile', (req, res, next) => {
+router.get('/user-profile', isLoggedIn, (req, res, next) => {
   User.findById(req.session.currentUser._id).populate('characters')
   .then(userWithCharacters => {
     console.log(userWithCharacters)

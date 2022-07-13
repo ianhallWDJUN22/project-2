@@ -1,7 +1,7 @@
 <h2>Created Characters</h2>
 
-    <div class="char-display">
         {{#each characters}}
+    <div class="char-block">
         <div class="char-image">
         <img src={{this.imageUrl}} height="200px">
         </div>
@@ -12,5 +12,15 @@
         <p>created by:{{this.userId.username}}</p>
         <a href="/characters/{{_id}}">Character details</a>
         </div>
+    </div>
         {{/each}}
     </div>
+
+<style>
+body {
+  background-image: url('https://images.wallpaperscraft.com/image/single/castle_waterfall_mountains_green_horseman_60065_1280x720.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>

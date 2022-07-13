@@ -13,7 +13,7 @@ h1 {
 
 nav{
   margin-top: 0;
-  background-color: rgb(123, 122, 122, 0.5);
+  background-color: rgba(68, 68, 68, 0.5);
   font-size: 20px;
   height: 50px;
 }
@@ -27,4 +27,8 @@ nav{
 
 .top-right {
   padding-left: 10px;
+}
+.char-block {
+  display: flex;
+  flex-direction: row;
 }

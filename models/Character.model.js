@@ -59,7 +59,8 @@ const characterSchema = new Schema({
 
     description: {
         type: String,
-        default: "no description added"
+        default: "no description added",
+        require: false
     }
 
     

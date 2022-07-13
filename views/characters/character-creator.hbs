@@ -1,11 +1,12 @@
 
 <div class="form">
 <form action="/create" method="post" enctype="multipart/form-data">
-
+<div class="form1">
 <label for="form-name">Choose a Name for your Character:
     <input class="form-name" id="form-name" type="text" name="name" placeholder="Name">
 </label>
-
+</div>
+<div class="form2">
 <label for="form-race">
     <select class="form-name" id="form-name" name="race" placeholder="Race">
         <option value="n-a">- Select Race -</option>
@@ -20,7 +21,8 @@
         <option value="Tiefling">Tiefling</option>
     </select>
 </label>
-
+</div>
+<div class="form3">
 <label for="form dndclass">
     <select name="dndclass" id="char-class" placeholder="Class">
         <option value="n-a">- Select Class -</option>
@@ -38,12 +40,14 @@
         <option value="Wizard">Wizard</option>
     </select>
 </label>
-
+</div>
+<div class="form4">
 <label>Image:
     <input type="file" name="imageFile">
 </label>
-
+</div>
 <button type="submit">Create Character</button>
+
 
 {{#if errorMessage}}
       <p class="error-message">{{errorMessage}}</p>
@@ -51,6 +55,7 @@
 
 
 </form>
+
 </div>
 <style>
 body {

@@ -1,25 +1,38 @@
-<h2>{{user.username}}</h2>
+<h2>{{character.name}}</h2>
 
     <div class="char-display">
         <div class="char-image">
         <img src={{character.imageUrl}} height="400px">
         </div>
         <div class="char-info">
-        <h4>Name: {{character.name}}</h4>
         <p>Race:{{character.race}}</p>
         <p>Class:{{character.dndclass}}</p>
         <p>Description: {{character.description}}</p>
         <p>Backstory: {{character.backstory}}</p>
+        <p>Created by: {{character.userId.username}}</p>
         </div>
        
 
        {{#if isMyCharacter}}
         <div class ="edit-button">
-        <button href="">Update Character</button>
+            <a href="/characters/{{character._id}}/edit">Update Character</a>
         </div>
         <div class="delete-button">
-        <button href="">Delete Character</button>
+            <form action="/characters/{{character._id}}/delete" method="POST">
+                <button type="submit" >Delete Character</button>
+            </form>
         </div>
         {{/if}}
 
+       
+
     </div>
+
+    <style>
+body {
+  background-image: url('https://images.wallpaperscraft.com/image/single/jungle_fantasy_deer_butterflies_night_trees_102121_1366x768.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
