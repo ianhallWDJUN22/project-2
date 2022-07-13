@@ -55,7 +55,13 @@ const characterSchema = new Schema({
 
     imageUrl: {
         type: String,
+    },
+
+    description: {
+        type: String,
+        default: "no description added"
     }
+
     
     
     

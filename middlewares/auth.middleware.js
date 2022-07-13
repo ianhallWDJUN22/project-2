@@ -11,7 +11,7 @@ const isLoggedIn = (req, res, next) => {
 const isLoggedOut = (req, res, next) => {
     
     if(req.session.currentUser) {
-        res.redirect('/');
+        res.redirect('/user-profile');
         return;
     }
    

@@ -1,10 +1,22 @@
 {{#if user}}
-<h2>Welcome, {{user.username}}!</h2>
-<p> This is your profile page</p>
+<h2>Hello, {{user.username}}!</h2>
+<p> You are currently logged in</p>
 <button>
     <a href="/user-profile">reload page</a>
 </button>
 {{else}}
     <p>User not logged in, sorry</p>
     <a href="/login">Log in</a> 
-{{/if}} 
+{{/if}}
+
+{{#each user.characters}}
+<div class="char-image">
+    <img src={{this.imageUrl}} height="200px">
+</div>
+<div class="char-info">
+    <h4>Name: {{this.name}}</h4>
+    <p>Race:{{this.race}}</p>
+    <p>Class:{{this.dndclass}}</p>
+    <a href="/characters/{{_id}}">Character details</a>
+</div>
+{{/each}}

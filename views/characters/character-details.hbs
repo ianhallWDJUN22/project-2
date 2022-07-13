@@ -1,0 +1,25 @@
+<h2>{{user.username}}</h2>
+
+    <div class="char-display">
+        <div class="char-image">
+        <img src={{character.imageUrl}} height="400px">
+        </div>
+        <div class="char-info">
+        <h4>Name: {{character.name}}</h4>
+        <p>Race:{{character.race}}</p>
+        <p>Class:{{character.dndclass}}</p>
+        <p>Description: {{character.description}}</p>
+        <p>Backstory: {{character.backstory}}</p>
+        </div>
+       
+
+       {{#if isMyCharacter}}
+        <div class ="edit-button">
+        <button href="">Update Character</button>
+        </div>
+        <div class="delete-button">
+        <button href="">Delete Character</button>
+        </div>
+        {{/if}}
+
+    </div>

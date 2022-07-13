@@ -6,15 +6,39 @@ const fileUploader = require('../config/cloudinary.config');
 
 
 const { isLoggedIn, isLoggedOut } =require("../middlewares/auth.middleware");
+
 const User = require("../models/User.model");
-/* GET home page */
+
+
 router.get("/", (req, res, next) => {
   res.render("index");
 });
 
+router.get('/characters/:characterId', (req, res, next) => {
+
+const { characterId } = req.params;
+
+Character.findById(characterId)
+  .populate("userId")
+  .then(theCharacter => { 
+    console.log(theCharacter);
+    let isMyCharacter = false;
+    if (req.session.currentUser && String(theCharacter.userId._id) === String(req.session.currentUser._id)) {
+      isMyCharacter = true
+    }
+    console.log(isMyCharacter);
+    res.render('characters/character-details.hbs', { character: theCharacter, isMyCharacter, user: theCharacter.userId })
+  })
+  .catch(error => {
+    console.log('Error while retrieving book details: ', error);
+    next(error);
+  });
+})
+
 router.get("/characters", (req, res, next) => {
   
   Character.find()
+    .populate("userId")
     .then(allCharactersArray => {
       res.render('characters/all-characters.hbs', {characters: allCharactersArray})
     })
@@ -35,7 +59,7 @@ router.post("/create", isLoggedIn, fileUploader.single('imageFile'), (req, res, 
     name,
     race,
     dndclass,
-    imageUrl: req.file === undefined ? "https://wallpapercrafter.com/th800/128452-portrait-display-original-characters-knight-armor-fantasy-art.jpg": req.file.path, 
+    imageUrl: req.file === undefined ? "https://res.cloudinary.com/dlasps7gk/image/upload/v1657730980/project-2-characters/defaultKnight_mvbknb.jpg": req.file.path, 
     userId : _id
 
 }) .then((response) => {
@@ -53,9 +77,14 @@ router.post("/create", isLoggedIn, fileUploader.single('imageFile'), (req, res, 
 
 router.get('/user-profile', (req, res, next) => {
   User.findById(req.session.currentUser._id).populate('characters')
-  .then(userCharacters => console.log(userCharacters))
-  res.render('user/user-profile.hbs', {character: userCharacters })
+  .then(userWithCharacters => {
+    console.log(userWithCharacters)
+    res.render('user/user-profile.hbs', {user: userWithCharacters })
+  })
+  
 })
+
+
 
 
 module.exports = router;

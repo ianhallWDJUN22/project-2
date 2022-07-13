@@ -6,9 +6,9 @@ const User = require('../models/User.model');
 const { isLoggedIn, isLoggedOut } = require('../middlewares/auth.middleware');
 
 
-router.get('/user-profile', isLoggedIn, (req, res, next) => {
-    res.render("user/user-profile.hbs", { user: req.session.currentUser});
-})
+// router.get('/user-profile', isLoggedIn, (req, res, next) => {
+//     res.render("user/user-profile.hbs", { user: req.session.currentUser});
+// })
 
 router.get("/signup", isLoggedOut, (req, res, next) => {
     res.render("auth/signup.hbs");
@@ -96,7 +96,7 @@ router.post('/login', isLoggedOut, (req, res, next) =>{
             if(isValidPassword){
                console.log(req.session)
                 req.session.currentUser = myUser;
-                res.render('user/user-profile.hbs', {user: myUser})
+                res.redirect('/user-profile')
             } else {
             res.render('auth/login.hbs', { errorMessage: 'Incorrect email or password.' })
             }
