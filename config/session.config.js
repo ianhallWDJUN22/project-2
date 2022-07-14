@@ -16,7 +16,7 @@ app.use(
             path: '/',
             httpOnly: true,
             secure: false,
-            maxAge: 600000
+            maxAge: 6000000
         },
         store: MongoStore.create({ mongoUrl: 'mongodb://localhost/lab-express-basic-auth'})
 

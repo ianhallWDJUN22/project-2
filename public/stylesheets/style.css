@@ -13,22 +13,55 @@ h1 {
 
 nav{
   margin-top: 0;
-  background-color: rgba(68, 68, 68, 0.5);
-  font-size: 20px;
-  height: 50px;
+  background-color: rgba(68, 68, 68, 0.7);
+  height: 70px;
 }
-
+.top-left {
+  font-size: 20px;
+}
 
 .nav-div {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  align-items: center;
 }
 
 .top-right {
-  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  /* padding-right: 10px; */
+  font-size: 10px;
+  justify-content: space-between;
+}
+.logout-btn, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: #00b7ff;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 .char-block {
   display: flex;
   flex-direction: row;
+  margin:20px;
+}
+.char-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}
+.char-info {
+  background-color: rgba(247, 207, 147, 0.4);
+}
+.created-char-blocks {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
 }

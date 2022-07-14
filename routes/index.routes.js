@@ -130,10 +130,17 @@ router.get('/user-profile', isLoggedIn, (req, res, next) => {
   .then(userWithCharacters => {
     console.log(userWithCharacters)
     res.render('user/user-profile.hbs', {user: userWithCharacters })
-  })
-  
+  }) 
+  .catch(err => console.log(err))
 })
 
+
+router.post('/logout', (req, res, next) => {
+  req.session.destroy(err => {
+    if (err) next(err);
+    res.redirect('/login');
+  });
+});
 
 
 

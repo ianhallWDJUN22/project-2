@@ -1,5 +1,5 @@
 <h2>Created Characters</h2>
-
+<div class="created-char-blocks">
         {{#each characters}}
     <div class="char-block">
         <div class="char-image">
@@ -9,12 +9,12 @@
         <h4>Name: {{this.name}}</h4>
         <p>Race:{{this.race}}</p>
         <p>Class:{{this.dndclass}}</p>
-        <p>created by:{{this.userId.username}}</p>
+        <p>Created by:{{this.userId.username}}</p>
         <a href="/characters/{{_id}}">Character details</a>
         </div>
     </div>
         {{/each}}
-    </div>
+</div>
 
 <style>
 body {

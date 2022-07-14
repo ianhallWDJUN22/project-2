@@ -1,16 +1,17 @@
-<h2>{{character.name}}</h2>
 
     <div class="char-display">
         <div class="char-image">
-        <img src={{character.imageUrl}} height="400px">
+        <img src={{character.imageUrl}} height="500px">
         </div>
         <div class="char-info">
-        <p>Race:{{character.race}}</p>
-        <p>Class:{{character.dndclass}}</p>
-        <p>Description: {{character.description}}</p>
-        <p>Backstory: {{character.backstory}}</p>
-        <p>Created by: {{character.userId.username}}</p>
+            <h2>{{character.name}}</h2>
+            <p>Race:{{character.race}}</p>
+            <p>Class:{{character.dndclass}}</p>
+            <p>Description: {{character.description}}</p>
+            <p>Backstory: {{character.backstory}}</p>
+            <p>Created by: {{character.userId.username}}</p>
         </div>
+    </div>
        
 
        {{#if isMyCharacter}}
@@ -26,7 +27,6 @@
 
        
 
-    </div>
 
     <style>
 body {

@@ -14,14 +14,23 @@
         <div class="nav-div">
           <div class="top-left">
             <a class="navHome" href="/">Home |</a>
-            <a class="navChars" href="/characters">Characters |</a>
+            <a class="navChars" href="/characters">All Characters |</a>
+            <a class="navMyChars" href="/user-profile">My Creations |</a>
             <a class="navCreate" href="/create">Create</a>
             
           </div>
           <div class=-"top-right">
-            <a class="navMyChars" href="/user-profile">My Creations |</a>
-            <a href="/login">Log in |</a>
-            <a href="/signup">Sign up</a>
+            <div>
+              <a href="/signup">Sign up</a>
+            </div>
+            <div>
+              <a href="/login">Log in</a>
+            </div>
+            <div>
+              <form id="logout-form" action="/logout" method="POST">
+                <button class="logout-btn">Log out</button>
+              </form>
+            </div>
           </div>
         </div>
       </nav>
