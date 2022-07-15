@@ -1,13 +1,10 @@
 {{#if user}}
-<h2>Hello, {{user.username}}!</h2>
-<p> You are currently logged in</p>
-{{else}}
-    <p>User not logged in, sorry</p>
-    <a href="/login">Log in</a> 
+<h2 class="myPageTop">Hello, {{user.username}}!</h2>
+
+<a class="myPageTop" id="myPageTopP" href="/create"><b>Create New Character</b></a>
 {{/if}}
 
 <h2>My Characters:</h2>
-<a href="/create">Create New Character</a>
 <div class="created-char-blocks">
 {{#each user.characters}}
 <div class="char-block">
@@ -21,7 +18,7 @@
     <p>Class: {{this.dndclass}}</p>
 </div>
 <div>
-    <a href="/characters/{{_id}}">Character details</a>
+    <a href="/characters/{{_id}}"><b>Character details</b></a>
 </div>
 </div>
 </div>

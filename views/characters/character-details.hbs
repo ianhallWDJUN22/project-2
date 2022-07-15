@@ -11,11 +11,11 @@
             <p><b>Description:</b> <br>{{character.description}}</p>
             <p><b>Backstory:</b> <br>{{character.backstory}}</p>
            </div>
-           <div>
+           <div class="char-info-large-bottom">
             <p><b>Created by:</b> {{character.userId.username}}</p>
             {{#if isMyCharacter}}
      
-            <a class ="edit-button" href="/characters/{{character._id}}/edit">Update Character</a>
+            <a class="edit-button" href="/characters/{{character._id}}/edit"><b>Update Character</b></a>
             {{/if}}
             </div>
         </div>
