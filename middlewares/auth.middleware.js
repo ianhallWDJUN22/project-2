@@ -1,7 +1,7 @@
 const isLoggedIn = (req, res, next) => {
 
     if(!req.session.currentUser){
-        res.redirect('/login');
+        res.render('auth/login.hbs', { errorMessage: 'Some features are only available when logged in!'})
         return;
     }
 

@@ -1,10 +1,13 @@
-<h2>{{character.name}}</h2>
-<img src="{{character.imageUrl}}" height="400px">
-<div class="form">
-<form action="/characters/{{character._id}}/edit" method="post" 
+<div class="editor-page">
+<div class="char-image-large">
+<img id="editor-img" src="{{character.imageUrl}}" height="400px">
+</div>
+
+<div class="editor-form">
+<form id="editor-form" action="/characters/{{character._id}}/edit" method="post" 
 {{!-- enctype="multipart/form-data" --}}
 >
-
+<h2>{{character.name}}</h2>
 <div class="form1">
 <label for="form-name">Name:
     <input class="form-name" id="form-name" type="text" name="name" value="{{character.name}}">
@@ -12,7 +15,7 @@
 </div>
 
 <div class="form2">
-<label for="form-race">
+<label for="form-race">Race:
     <select class="form-name" id="form-name" name="race" value="{{character.race}}">
        <option value="{{character.race}}">{{character.race}}</option>
         <option value="Dwarf">Dwarf</option>
@@ -29,7 +32,7 @@
 </div>
 
 <div class="form3">
-<label for="form dndclass">
+<label for="form dndclass">Class:
     <select name="dndclass" id="char-class" value="{{character.dndclass}}">
         <option value="{{character.dndclass}}">{{character.dndclass}}</option>
         <option value="Barbarian">Barbarian</option>
@@ -47,11 +50,6 @@
     </select>
 </label>
 </div>
-{{!-- <div class="form4">
-<label>Image:
-    <input type="file" name="imageFile" value="{{character.imageUrl}}">
-</label>
-</div> --}}
 
 <div class="form5">
 <label>Description:
@@ -67,13 +65,16 @@
 
 <button type="submit">Save Changes</button>
 
-
 {{#if errorMessage}}
       <p class="error-message">{{errorMessage}}</p>
     {{/if}}
-
-
 </form>
+        <div class="delete-button">
+            <form class="delete-form" action="/characters/{{character._id}}/delete" method="POST">
+                <button type="submit" >Delete Character</button>
+            </form>
+        </div>
+</div>
 </div>
 <style>
 body {

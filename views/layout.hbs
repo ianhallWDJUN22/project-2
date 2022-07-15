@@ -8,32 +8,29 @@
       <title>{{appTitle}}</title>
       <link rel="stylesheet" href="/stylesheets/style.css" />
    </head>
+  <nav>
+      <div class="navbar">
+ <div>
+   <a class="navHome" href="/">Home</a>
+   <a class="navChars" href="/characters">All Creations</a>
+   <a class="navMyChars" href="/user-profile">My Creations</a>
+   <a class="navCreate" href="/create">Create</a>
 
-   <body>
-      <nav>
-        <div class="nav-div">
-          <div class="top-left">
-            <a class="navHome" href="/">Home |</a>
-            <a class="navChars" href="/characters">All Characters |</a>
-            <a class="navMyChars" href="/user-profile">My Creations |</a>
-            <a class="navCreate" href="/create">Create</a>
-            
-          </div>
-          <div class=-"top-right">
-            <div>
-              <a href="/signup">Sign up</a>
-            </div>
-            <div>
-              <a href="/login">Log in</a>
-            </div>
-            <div>
-              <form id="logout-form" action="/logout" method="POST">
-                <button class="logout-btn">Log out</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </nav>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">
+      User Info
+    </button>
+    <div class="dropdown-content">
+      <a href="/signup">Sign up</a>
+      <a href="/login">Log in</a>
+      <a href="/logout">Log out</a>
+      <a href="/user-profile">My page</a>
+    </div>
+  </div>
+</div>
+</nav>
+
       {{{body}}}
 
       <script src="/js/script.js"></script>

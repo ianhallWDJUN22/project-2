@@ -4,6 +4,12 @@ const saltRounds = 10;
 const User = require('../models/User.model');
 const { isLoggedIn, isLoggedOut } = require('../middlewares/auth.middleware');
 
+router.get("/logout", isLoggedIn, (req, res, next) => {
+    
+
+    res.render("auth/logout.hbs");
+})
+
 
 router.get("/signup", isLoggedOut, (req, res, next) => {
     res.render("auth/signup.hbs");

@@ -19,7 +19,7 @@ require('./config/session.config')(app);
 require("./config")(app);
 
 
-const projectName = "D&D Create";
+const projectName = "Dungeon Forge";
 
 app.locals.appTitle = `${projectName}`;
 

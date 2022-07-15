@@ -1,7 +1,7 @@
 <div id="form">
     <h2>Login</h2>
-    <p>Some features require you to be logged in to an account. Log in below.</p>
     <form action="/login" method="POST">
+    
 
       <label> Email
           <input type="email" name="email" placeholder="user@example.com"/>    
@@ -16,8 +16,8 @@
      {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
      {{/if}}
-    </form>
     <p>Need to create an account? <a href="/signup">Sign up</a> here!</p>
+    </form>
 </div>
 <style>
 body {

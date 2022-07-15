@@ -12,13 +12,17 @@
 {{#each user.characters}}
 <div class="char-block">
 <div class="char-image">
-    <img src={{this.imageUrl}} height="200px">
+    <img src={{this.imageUrl}} height="210px">
 </div>
-<div class="char-info">
-    <h4>Name: {{this.name}}</h4>
-    <p>Race:{{this.race}}</p>
-    <p>Class:{{this.dndclass}}</p>
+<div class="char-info-all-chars">
+<div>
+    <h3>{{this.name}}</h3>
+    <p>Race: {{this.race}}</p>
+    <p>Class: {{this.dndclass}}</p>
+</div>
+<div>
     <a href="/characters/{{_id}}">Character details</a>
+</div>
 </div>
 </div>
 {{/each}}
@@ -30,5 +34,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+#navMyChars{
+  background-color: rgba(194, 138, 26);
 }
 </style>

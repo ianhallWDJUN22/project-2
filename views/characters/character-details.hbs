@@ -1,29 +1,27 @@
 
     <div class="char-display">
-        <div class="char-image">
-        <img src={{character.imageUrl}} height="500px">
+        <div class="char-image-large">
+        <img src={{character.imageUrl}} height="452px">
         </div>
-        <div class="char-info">
+        <div class="char-info-large">
+            <div>
             <h2>{{character.name}}</h2>
-            <p>Race:{{character.race}}</p>
-            <p>Class:{{character.dndclass}}</p>
-            <p>Description: {{character.description}}</p>
-            <p>Backstory: {{character.backstory}}</p>
-            <p>Created by: {{character.userId.username}}</p>
+            <p><b>Race:</b> {{character.race}}</p>
+            <p><b>Class:</b> {{character.dndclass}}</p>
+            <p><b>Description:</b> <br>{{character.description}}</p>
+            <p><b>Backstory:</b> <br>{{character.backstory}}</p>
+           </div>
+           <div>
+            <p><b>Created by:</b> {{character.userId.username}}</p>
+            {{#if isMyCharacter}}
+     
+            <a class ="edit-button" href="/characters/{{character._id}}/edit">Update Character</a>
+            {{/if}}
+            </div>
         </div>
     </div>
+    
        
-
-       {{#if isMyCharacter}}
-        <div class ="edit-button">
-            <a href="/characters/{{character._id}}/edit">Update Character</a>
-        </div>
-        <div class="delete-button">
-            <form action="/characters/{{character._id}}/delete" method="POST">
-                <button type="submit" >Delete Character</button>
-            </form>
-        </div>
-        {{/if}}
 
        
 

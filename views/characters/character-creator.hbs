@@ -1,14 +1,14 @@
 
-<div class="form">
-<form action="/create" method="post" enctype="multipart/form-data">
+<div  class="form">
+<form id="creator-form" action="/create" method="post" enctype="multipart/form-data">
 <div class="form1">
 <label for="form-name">Choose a Name for your Character:
     <input class="form-name" id="form-name" type="text" name="name" placeholder="Name">
 </label>
 </div>
 <div class="form2">
-<label for="form-race">
-    <select class="form-name" id="form-name" name="race" placeholder="Race">
+<label for="form-race">Select A Race:
+    <select class="form-race" id="form-name" name="race" placeholder="Race">
         <option value="n-a">- Select Race -</option>
         <option value="Dwarf">Dwarf</option>
         <option value="Elf">Elf</option>
@@ -23,7 +23,7 @@
 </label>
 </div>
 <div class="form3">
-<label for="form dndclass">
+<label for="form dndclass">Select A Class:
     <select name="dndclass" id="char-class" placeholder="Class">
         <option value="n-a">- Select Class -</option>
         <option value="Barbarian">Barbarian</option>
@@ -42,7 +42,7 @@
 </label>
 </div>
 <div class="form4">
-<label>Image:
+<label>Upload An Image:
     <input type="file" name="imageFile">
 </label>
 </div>
@@ -59,9 +59,13 @@
 </div>
 <style>
 body {
-  background-image: url('https://images.wallpaperscraft.com/image/single/blacksmith_anvil_art_hammer_sword_fire_100299_1366x768.jpg');
+  background-image: url('https://images.wallpaperscraft.com/image/single/lock_chain_wreckage_fog_63090_1366x768.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
+#navCreate{
+  background-color: rgba(194, 138, 26);
+}
+
 </style>
