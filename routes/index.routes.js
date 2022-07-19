@@ -105,6 +105,12 @@ router.post("/create", isLoggedIn, fileUploader.single('imageFile'), (req, res, 
   console.log(req.session.currentUser)
   const { _id } = req.session.currentUser
   console.log(req.body)
+  if(race === 'n-a' || dndclass === 'n-a') {
+    res.render('characters/character-creator.hbs',  {
+      errorMessage: 'Must select both a race and a class to create character.'
+  } )
+  } else {
+
   Character.create({
     name,
     race,
@@ -123,6 +129,7 @@ router.post("/create", isLoggedIn, fileUploader.single('imageFile'), (req, res, 
   }) 
   .catch(err => console.log(err))
 })
+  }
 })
 
 router.get('/user-profile', isLoggedIn, (req, res, next) => {

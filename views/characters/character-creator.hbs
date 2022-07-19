@@ -1,5 +1,5 @@
 
-<h2 id="char-create-top">Character Creator</h2>
+<h2 id="char-create-top">The Forge</h2>
 <div  class="form">
 <form id="creator-form" action="/create" method="post" enctype="multipart/form-data">
 <div class="form1">
@@ -23,9 +23,9 @@
     </select>
 </label>
 </div>
-<div class="form3">
+<div class="form2">
 <label for="form dndclass">Select A Class:
-    <select name="dndclass" id="char-class" placeholder="Class">
+    <select class="form-race" name="dndclass" id="char-class" placeholder="Class">
         <option value="n-a">- Select Class -</option>
         <option value="Barbarian">Barbarian</option>
         <option value="Bard">Bard</option>
@@ -44,14 +44,14 @@
 </div>
 <div class="form4">
 <label>Upload An Image:
-    <input type="file" name="imageFile">
+    <input id="fileUpload" type="file" name="imageFile">
 </label>
 </div>
 <button type="submit">Create Character</button>
 
 
 {{#if errorMessage}}
-      <p class="error-message">{{errorMessage}}</p>
+      <p class="error">{{errorMessage}}</p>
     {{/if}}
 
 

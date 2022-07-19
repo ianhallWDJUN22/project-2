@@ -19,12 +19,11 @@ a {
 
 .navbar a {
   float: left;
-  font-size: 18px;
+  font-size: 22px;
   color: white;
   text-align: center;
   padding: 16px 18px;
   text-decoration: none;
-  
 }
 
 
@@ -140,6 +139,8 @@ a {
   padding-left: 20px;
   padding-right: 20px;
   width: 300px;
+  height: 470px;
+  overflow: scroll
 }
 .created-char-blocks {
 display: flex;
@@ -226,7 +227,7 @@ form button {
 }
 
 form button:hover {
-  background-color: rgba(247, 247, 246, 0.548);
+  background-color: rgba(247, 247, 246, 0.707);
   color: rgb(197, 171, 2);
   /* text-shadow: 1px 1px rgba(39, 38, 38, 0.5); */
   transition: 0.3s ease background;
@@ -284,6 +285,7 @@ form button:hover {
   flex-direction: row;
   justify-content: center;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 #editor-form {
@@ -294,6 +296,9 @@ form button:hover {
 }
 .editor-form {
   margin-top: 0px;
+  margin-bottom: 0px;
+  height: 445px;
+  overflow: scroll;
 }
 
 .char-info-large-bottom {
@@ -305,12 +310,13 @@ form button:hover {
   flex-direction: column;
   justify-content: space-between;
 }
+.delete-button {
+  padding: 0px;
+  margin-top: 0px;
+}
 .delete-form {
   background-color: rgba(253, 223, 179, 0.5);
   margin-top: 0px;
-}
-#creator-form {
-  background-color: rgba(253, 223, 179, 0.5);
 }
 
 #creator-form label {
@@ -334,4 +340,46 @@ h2 {
 }
 #char-create-top {
   margin-top: 40px;
+  color: rgb(197, 171, 2);
+}
+.form1 {
+  display: flex;
+  justify-content: center;
+}
+.form2{
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-race {
+  width: 200px;
+  height: 25px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.form-name {
+  width: 325px;
+}
+
+#fileUpload {
+  padding-left: 115px;
+}
+.homePage {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.editor-form {
+  padding-bottom:0px;
+  padding-top:0px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.img-small {
+  max-width: 250px;
+}
+#creator-form {
+  background-color: rgba(253, 223, 179, 0.5);
+  display: flex;
+  justify-content: space-between;
 }

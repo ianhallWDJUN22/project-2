@@ -15,8 +15,8 @@
 </div>
 
 <div class="form2">
-<label for="form-race">Race:
-    <select class="form-name" id="form-name" name="race" value="{{character.race}}">
+<label id="form2-label" for="form-race">Race:
+    <select class="form-race" id="form-name" name="race" value="{{character.race}}">
        <option value="{{character.race}}">{{character.race}}</option>
         <option value="Dwarf">Dwarf</option>
         <option value="Elf">Elf</option>
@@ -31,9 +31,9 @@
 </label>
 </div>
 
-<div class="form3">
+<div class="form2">
 <label for="form dndclass">Class:
-    <select name="dndclass" id="char-class" value="{{character.dndclass}}">
+    <select class="form-race" name="dndclass" id="char-class" value="{{character.dndclass}}">
         <option value="{{character.dndclass}}">{{character.dndclass}}</option>
         <option value="Barbarian">Barbarian</option>
         <option value="Bard">Bard</option>
@@ -50,7 +50,6 @@
     </select>
 </label>
 </div>
-
 <div class="form5">
 <label>Description:
     <textarea name="description" cols="30" rows="4">{{character.description}}</textarea>
