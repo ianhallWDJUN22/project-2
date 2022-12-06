@@ -1,40 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>{{appTitle}}</title>
-      <link rel="stylesheet" href="/stylesheets/style.css" />
-   </head>
-  <nav>
-      <div class="navbar">
- <div>
-   <a class="navHome" href="/">Home</a>
-   <a class="navChars" href="/characters">Gallery</a>
-   <a class="navMyChars" href="/user-profile">My Creations</a>
-   <a class="navCreate" href="/create">Create</a>
-  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{appTitle}}</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<nav>
+  <div class="navbar">
+    <div>
+      <a class="navHome" href="/">Home</a>
+      <a class="navChars" href="/characters">Gallery</a>
+      <a class="navMyChars" href="/user-profile">My Creations</a>
+      <a class="navCreate" href="/create">Create</a>
 
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">
-      User Menu
-    </button>
-    <div class="dropdown-content">
-      <a href="/signup">Sign up</a>
-      <a href="/login">Log in</a>
-      <a href="/logout">Log out</a>
-      <a href="/user-profile">My page</a>
+
+    </div>
+
+    <div class="dropdown">
+      <button class="dice-dropbtn" id="d20Button">Roll D20</button>
+      <div class="dice-dropdown-content">
+          <p id="d20Result">⬣</p>
+      </div> 
+    </div>
+
+
+    <div class="dropdown">
+      <button class="dropbtn">
+        User Menu
+      </button>
+      <div class="dropdown-content">
+        <a href="/signup">Sign up</a>
+        <a href="/login">Log in</a>
+        <a href="/logout">Log out</a>
+        <a href="/user-profile">My page</a>
+      </div>
     </div>
   </div>
-</div>
+
 </nav>
 
-      {{{body}}}
- 
-      <script src="/js/script.js"></script>
-   </body>
+{{{body}}}
+
+<script src="/js/script.js"></script>
+</body>
 
 </html>
+<script>
+  let d20 = {
+    sides: 20,
+    roll: function () {
+      let randomNumber = Math.floor(Math.random() *
+        this.sides) + 1;
+      return randomNumber;
+    }
+  };
+
+  function printNumber(number) {
+    let d20Result = document.getElementById('d20Result');
+    d20Result.innerHTML = number;
+  }
+
+  let d20Button = document.getElementById('d20Button');
+
+  d20Button.onclick = function () {
+    let result = d20.roll();
+    printNumber(result);
+  }
+
+</script>

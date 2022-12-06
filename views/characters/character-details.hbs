@@ -1,3 +1,11 @@
+    <style>
+body {
+  background-image: url('https://images.wallpaperscraft.com/image/single/jungle_fantasy_deer_butterflies_night_trees_102121_1366x768.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
 
     <div class="char-display">
         <div class="char-image-large">
@@ -8,8 +16,12 @@
             <h2>{{character.name}}</h2>
             <p><b>Race:</b> {{character.race}}</p>
             <p><b>Class:</b> {{character.dndclass}}</p>
+            <div class="overFlowText">
             <p><b>Description:</b> <br>{{character.description}}</p>
+            </div>
+            <div class="overFlowText">
             <p><b>Backstory:</b> <br>{{character.backstory}}</p>
+            </div>
            </div>
            <div class="char-info-large-bottom">
             <p><b>Created by:</b> {{character.userId.username}}</p>
@@ -25,12 +37,3 @@
 
        
 
-
-    <style>
-body {
-  background-image: url('https://images.wallpaperscraft.com/image/single/jungle_fantasy_deer_butterflies_night_trees_102121_1366x768.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-</style>

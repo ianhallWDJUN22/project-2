@@ -7,7 +7,6 @@
 <form id="editor-form" action="/characters/{{character._id}}/edit" method="post" 
 {{!-- enctype="multipart/form-data" --}}
 >
-<h2>{{character.name}}</h2>
 <div class="form1">
 <label for="form-name">Name:
     <input class="form-name" id="form-name" type="text" name="name" value="{{character.name}}">
@@ -52,13 +51,13 @@
 </div>
 <div class="form5">
 <label>Description:
-    <textarea name="description" cols="30" rows="4">{{character.description}}</textarea>
+    <textarea class="textArea" name="description" cols="30" rows="4">{{character.description}}</textarea>
 </label>
 </div>
 
 <div class="form6">
 <label>Backstory:
-    <textarea name="backstory" cols="30" rows="4">{{character.backstory}}</textarea>
+    <textarea class="textArea" name="backstory" cols="30" rows="4">{{character.backstory}}</textarea>
 </label>
 </div>
 

@@ -1,47 +1,28 @@
 <div class="homePage">
-<h1>{{appTitle}}</h1>
-<p>Welcome to {{appTitle}}! A world builders best friend.</p>
+  <h1>{{appTitle}}</h1>
+  <p>Welcome to {{appTitle}}! A world builders best friend.</p>
 
-<a>At {{appTitle}} you can browse characters built by other users,<br> create your own characters and store them on your page!</a>
+  <a>At {{appTitle}} you can browse characters built by other users,
+    <br> create your own characters and store them on your page!
+    <br> Don't have your dice with you? No problem! 
+    <br> Dungeon Forge has a "Roll D20" button at the top of every page! 
+    <br>Just click the button and see what you've rolled!
+  </a>
 
-<a href="/signup">Signup |</a>
-<a href="/login"> Log in</a>
-<p id="d20Result">
-
-</p>
-<button id="d20Button">Roll D20</button>
+  <div>
+    <a href="/signup">Signup |</a>
+    <a href="/login"> Log in</a>
+  </div>
 </div>
 <style>
-body {
-  background-image: url('https://images.wallpaperscraft.com/image/single/lock_mountains_city_fog_3479_1366x768.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-#navHome{
-  background-color: rgba(194, 138, 26);
-}
+  body {
+    background-image: url('https://images.wallpaperscraft.com/image/single/lock_mountains_city_fog_3479_1366x768.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  #navHome {
+    background-color: rgba(194, 138, 26);
+  }
 </style>
-<script>
-  let  d20 = {
-    sides: 20,
-    roll: function () {
-        let randomNumber = Math.floor(Math.random() * 
-        this.sides) + 1;
-            return randomNumber;
-    }
-};
-
-function printNumber(number) {
-    let d20Result = document.getElementById('d20Result');
-    d20Result.innerHTML = number;
-}
-
-let d20Button = document.getElementById('d20Button');
-
-d20Button.onclick = function() {
-    let result = d20.roll();
-    printNumber(result);
-}
-
-</script>

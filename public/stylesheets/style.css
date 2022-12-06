@@ -1,7 +1,6 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 a {
   color: rgb(197, 171, 2);
   text-decoration:none;
@@ -14,6 +13,7 @@ a {
   align-items: center;
   overflow: hidden;
   background-color: rgba(50, 50, 50, 0.6);
+  font-family: Arial, Helvetica, sans-serif
  
 }
 
@@ -24,6 +24,15 @@ a {
   text-align: center;
   padding: 16px 18px;
   text-decoration: none;
+}
+
+#d20Result {
+  font-size: 16px;
+  float: none;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: left;
+  text-shadow: 0px;
 }
 
 
@@ -44,8 +53,23 @@ a {
   margin: 0;
 }
 
+.dice-dropbtn {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  padding:18px 18px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
 .dropdown:hover .dropbtn {
   background-color: rgba(194, 138, 26);
+}
+
+.dropdown:hover .dice-dropbtn {
+  background-color: rgba(194, 138, 26,0.5);
 }
 
 
@@ -63,6 +87,14 @@ a {
   z-index: 1;
 }
 
+.dice-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(50, 50, 50, 0.6);
+  min-width: 105.5px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
 .dropdown-content a {
   font-size: 16px;
@@ -75,6 +107,17 @@ a {
   text-shadow: 0px;
 }
 
+#d20Result {
+  font-size: 20px;
+  float: none;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  text-shadow: 0px;
+}
+
+
 .dropdown-content a:hover {
   background-color: rgba(194, 138, 26,0.5);
 }
@@ -82,6 +125,11 @@ a {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.dropdown:hover .dice-dropdown-content {
+  display: block;
+}
+
 
 .top-left {
   font-size: 20px;
@@ -140,7 +188,11 @@ a {
   padding-right: 20px;
   width: 300px;
   height: 470px;
-  overflow: scroll
+  /* overflow: scroll */
+}
+.overFlowText {
+  overflow: scroll;
+  max-height: 120px; 
 }
 .created-char-blocks {
 display: flex;
@@ -278,6 +330,7 @@ form button:hover {
 }
 #logoutH2 {
  margin-top: 80px;
+ margin-bottom: 130px;
 }
 
 .editor-page {
@@ -322,6 +375,9 @@ form button:hover {
 #creator-form label {
   color:black;
 }
+#editor-form label {
+  color:black;
+}
 
 h2 {
   display: flex;
@@ -356,9 +412,11 @@ h2 {
   height: 25px;
   text-align: center;
   margin-bottom: 30px;
+  margin-top:5px;
 }
 .form-name {
   width: 325px;
+  margin-top: 5px;
 }
 
 #fileUpload {
@@ -382,4 +440,12 @@ h2 {
   background-color: rgba(253, 223, 179, 0.5);
   display: flex;
   justify-content: space-between;
+}
+.textArea {
+  margin-top: 5px;
+}
+
+.diceTab {
+  display: flex;
+  flex-direction: row;
 }
