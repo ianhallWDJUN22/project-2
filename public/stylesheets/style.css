@@ -7,6 +7,9 @@ a {
   text-shadow: 1px 1px 1px rgba(39, 38, 38, 0.5);
 }
 
+
+/*NAVBAR*/
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -19,15 +22,15 @@ a {
 
 .navbar a {
   float: left;
-  font-size: 22px;
+  font-size: 18px;
   color: white;
   text-align: center;
-  padding: 16px 18px;
+  padding: 18px 18px;
   text-decoration: none;
 }
 
 #d20Result {
-  font-size: 16px;
+  font-size: 18px;
   float: none;
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -47,7 +50,7 @@ a {
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
-  padding: 16px 18px;
+  padding: 18px 18px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -59,9 +62,11 @@ a {
   outline: none;
   color: rgb(255, 255, 255);
   padding:18px 18px;
+  
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  margin-left: 100px;
 }
 
 .dropdown:hover .dropbtn {
@@ -82,7 +87,7 @@ a {
   display: none;
   position: absolute;
   background-color: rgba(50, 50, 50, 0.6);
-  min-width: 128.5px;
+  min-width: 124px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -90,10 +95,13 @@ a {
 .dice-dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(50, 50, 50, 0.6);
+  background-color: rgba(194, 138, 26,0.5);
   min-width: 105.5px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  margin-left: 100px;
+  border-radius: 0px 0px 10px 10px;
+  text-shadow: 1px 1px 1px rgba(75, 74, 74, 0.231);
 }
 
 .dropdown-content a {
@@ -142,17 +150,78 @@ a {
   align-items: center;
 }
 
-.logout-btn, input[type="submit"], input[type="reset"] {
-    background: none;
-    background: rgb(197, 171, 2);
-    border: none;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-    margin-top: 50px;
-    margin-left: 80px;
-    margin-right: 80px;
+
+/*FONTS*/
+h1 {
+  color: rgb(206, 162, 19);
+  font-size: 60px;
+  text-shadow: 1px 2px 5px rgba(47, 46, 46, 0.856);
+  margin-bottom: 20px;
+  margin-left: 65px;
 }
+
+
+.indexText{
+  display: flex;
+  flex-direction: column;
+  max-width: 620px;
+  font-size: 16px;
+}
+
+.indexText p {
+  color:rgb(48, 46, 46);
+  margin-top: 5px;
+  text-shadow: 2px 1px 1px 5px rgba(121, 120, 120, 0.5);
+}
+
+.newFeaturesBox {
+  color:black;
+  background-color: rgba(50, 50, 50, 0.288);
+  margin-top: 60px;
+  margin-left: 30px;
+  max-width: 500px;
+  border-radius: 3px;
+  padding-left: 8px;
+  padding-right: 10px;
+  text-shadow: 1px 1px 1px rgba(121, 120, 120, 0.5);
+  text-align: center;
+}
+.newFeaturesBox p {
+  color:black;
+  text-shadow: 0px 0px 5px rgb(166, 161, 161);
+  margin-bottom: 10px;
+  margin-top: 5px;
+
+}
+
+#newFeatures {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-size: 20px;
+  color: rgb(197, 171, 2);
+  text-decoration:none;
+  text-shadow: 2px 1px 1px rgba(39, 38, 38, 0.5);
+  text-align: center;
+}
+
+#indexText1 {
+  font-size: 18px;
+}
+
+.indexText a {
+  margin-left: 6px;
+}
+
+#indexSignUp {
+  margin-top: 40px;
+}
+
+
+
+
+/*FORMS*/
+
+
 .char-image-large img {
   border: solid 10px;
   border-color:rgba(84, 69, 46, 0.8);
@@ -195,9 +264,9 @@ a {
   max-height: 120px; 
 }
 .created-char-blocks {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .char-info-all-chars {
@@ -223,8 +292,6 @@ img {
   border-top-color: rgb(132, 108, 73);
   border-right-color:rgb(123, 101, 67) ;
 }
-
-/* /////////////////////////////////////////// */
 
 
 form {
@@ -274,7 +341,7 @@ form button {
   margin-left: 17px;
   margin-top: 10px;
   margin-bottom: 30px;
-
+  
   
 }
 
@@ -310,7 +377,7 @@ form button:hover {
 
 #logout-form button {
   width: 120px;
-
+  
 }
 #form p {
   justify-self:center;
@@ -328,9 +395,20 @@ form button:hover {
 .logout-form {
   background-color: rgba(253, 223, 179, 0.5);
 }
+.logout-btn, input[type="submit"], input[type="reset"] {
+    background: none;
+    background: rgb(197, 171, 2);
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
 #logoutH2 {
- margin-top: 80px;
- margin-bottom: 130px;
+  margin-top: 80px;
+  margin-bottom: 130px;
 }
 
 .editor-page {

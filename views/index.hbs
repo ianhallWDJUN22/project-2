@@ -1,19 +1,30 @@
 <div class="homePage">
   <h1>{{appTitle}}</h1>
-  <p>Welcome to {{appTitle}}! A world builders best friend.</p>
 
-  <a>At {{appTitle}} you can browse characters built by other users,
-    <br> create your own characters and store them on your page!
-    <br> Don't have your dice with you? No problem! 
-    <br> Dungeon Forge has a "Roll D20" button at the top of every page! 
-    <br>Just click the button and see what you've rolled!
-  </a>
+  <div class="indexText">
+    <p id="indexText1">
+      <b>Welcome to {{appTitle}}!
+       Here you can browse characters built by other users,
+       create your own characters and store them on your page!
+       </b>
+    </p>
 
-  <div>
-    <a href="/signup">Signup |</a>
-    <a href="/login"> Log in</a>
+    <div class="newFeaturesBox">
+    <p id="newFeatures"><b>New Feature!</b></p>
+    <p>
+      Don't have your dice with you? No problem! 
+Just click the "Roll D20" button at the top of every page to see what you've rolled!
+    </p>
+    </div>
+
+    {{!-- <div id="indexSignUp">
+      <a href="/signup">Signup  |</a>
+      <a href="/login"> Log in</a>
+    </div> --}}
+
   </div>
 </div>
+
 <style>
   body {
     background-image: url('https://images.wallpaperscraft.com/image/single/lock_mountains_city_fog_3479_1366x768.jpg');
