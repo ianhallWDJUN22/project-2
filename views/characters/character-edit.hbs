@@ -1,84 +1,84 @@
 <div class="editor-page">
-<div class="char-image-large">
-<img id="editor-img" src="{{character.imageUrl}}" height="400px">
-</div>
+    <div class="char-image-large">
+        <img id="editor-img" src="{{character.imageUrl}}" height="400px">
+    </div>
 
-<div class="editor-form">
-<form id="editor-form" action="/characters/{{character._id}}/edit" method="post" 
-{{!-- enctype="multipart/form-data" --}}
->
-<div class="form1">
-<label for="form-name">Name:
-    <input class="form-name" id="form-name" type="text" name="name" value="{{character.name}}">
-</label>
-</div>
+    <div class="editor-form">
+        <form id="editor-form" action="/characters/{{character._id}}/edit" method="post" {{!--
+            enctype="multipart/form-data" --}}>
+            <div class="form1">
+                <label for="form-name">Name:
+                    <input class="form-name" id="form-name" type="text" name="name" value="{{character.name}}">
+                </label>
+            </div>
 
-<div class="form2">
-<label id="form2-label" for="form-race">Race:
-    <select class="form-race" id="form-name" name="race" value="{{character.race}}">
-       <option value="{{character.race}}">{{character.race}}</option>
-        <option value="Dwarf">Dwarf</option>
-        <option value="Elf">Elf</option>
-        <option value="Halfling">Halfling</option>
-        <option value="Human">Human</option>
-        <option value="Dragonborn">Dragonborn</option>
-        <option value="Gnome">Gnome</option>
-        <option value="Half-Elf">Half-Elf</option>
-        <option value="Half-Orc">Half-Orc</option>
-        <option value="Tiefling">Tiefling</option>
-    </select>
-</label>
-</div>
+            <div class="form2">
+                <label id="form2-label" for="form-race">Race:
+                    <select class="form-race" id="form-name" name="race" value="{{character.race}}">
+                        <option value="{{character.race}}">{{character.race}}</option>
+                        <option value="Dwarf">Dwarf</option>
+                        <option value="Elf">Elf</option>
+                        <option value="Halfling">Halfling</option>
+                        <option value="Human">Human</option>
+                        <option value="Dragonborn">Dragonborn</option>
+                        <option value="Gnome">Gnome</option>
+                        <option value="Half-Elf">Half-Elf</option>
+                        <option value="Half-Orc">Half-Orc</option>
+                        <option value="Tiefling">Tiefling</option>
+                    </select>
+                </label>
+            </div>
 
-<div class="form2">
-<label for="form dndclass">Class:
-    <select class="form-race" name="dndclass" id="char-class" value="{{character.dndclass}}">
-        <option value="{{character.dndclass}}">{{character.dndclass}}</option>
-        <option value="Barbarian">Barbarian</option>
-        <option value="Bard">Bard</option>
-        <option value="Cleric">Cleric</option>
-        <option value="Druid">Druid</option>
-        <option value="Fighter">Fighter</option>
-        <option value="Monk">Monk</option>
-        <option value="Paladin">Paladin</option>
-        <option value="Ranger">Ranger</option>
-        <option value="Rogue">Rogue</option>
-        <option value="Sorcerer">Sorcerer</option>
-        <option value="Warlock">Warlock</option>
-        <option value="Wizard">Wizard</option>
-    </select>
-</label>
-</div>
-<div class="form5">
-<label>Description:
-    <textarea class="textArea" name="description" cols="30" rows="4">{{character.description}}</textarea>
-</label>
-</div>
+            <div class="form2">
+                <label for="form dndclass">Class:
+                    <select class="form-race" name="dndclass" id="char-class" value="{{character.dndclass}}">
+                        <option value="{{character.dndclass}}">{{character.dndclass}}</option>
+                        <option value="Barbarian">Barbarian</option>
+                        <option value="Bard">Bard</option>
+                        <option value="Cleric">Cleric</option>
+                        <option value="Druid">Druid</option>
+                        <option value="Fighter">Fighter</option>
+                        <option value="Monk">Monk</option>
+                        <option value="Paladin">Paladin</option>
+                        <option value="Ranger">Ranger</option>
+                        <option value="Rogue">Rogue</option>
+                        <option value="Sorcerer">Sorcerer</option>
+                        <option value="Warlock">Warlock</option>
+                        <option value="Wizard">Wizard</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form5">
+                <label>Description:
+                    <textarea class="textArea" name="description" cols="30"
+                        rows="4">{{character.description}}</textarea>
+                </label>
+            </div>
 
-<div class="form6">
-<label>Backstory:
-    <textarea class="textArea" name="backstory" cols="30" rows="4">{{character.backstory}}</textarea>
-</label>
-</div>
-
-<button type="submit">Save Changes</button>
-
-{{#if errorMessage}}
-      <p class="error-message">{{errorMessage}}</p>
-    {{/if}}
-</form>
-        <div class="delete-button">
-            <form class="delete-form" action="/characters/{{character._id}}/delete" method="POST">
-                <button type="submit" >Delete Character</button>
-            </form>
-        </div>
-</div>
+            <div class="form6">
+                <label>Backstory:
+                    <textarea class="textArea" name="backstory" cols="30" rows="4">{{character.backstory}}</textarea>
+                </label>
+            </div>
+            <div class="delete-button">
+                <button id="save-edit" type="submit">Save Changes</button>
+            </div>
+            {{#if errorMessage}}
+            <p class="error-message">{{errorMessage}}</p>
+            {{/if}}
+            <div class="delete-button">
+                <form class="delete-form" action="/characters/{{character._id}}/delete" method="POST">
+                    <button id="update-delete" type="submit">Delete Character</button>
+                </form>
+            </div>
+        </form>
+    </div>
 </div>
 <style>
-body {
-  background-image: url('https://images.wallpaperscraft.com/image/single/jungle_fantasy_deer_butterflies_night_trees_102121_1366x768.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
+    body {
+        background-image: url('https://images.wallpaperscraft.com/image/single/jungle_fantasy_deer_butterflies_night_trees_102121_1366x768.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
 </style>

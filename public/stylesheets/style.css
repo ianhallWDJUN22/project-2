@@ -8,7 +8,14 @@ a {
 }
 
 
+
+
+
 /*NAVBAR*/
+
+
+
+
 
 .navbar {
   display: flex;
@@ -16,8 +23,7 @@ a {
   align-items: center;
   overflow: hidden;
   background-color: rgba(50, 50, 50, 0.6);
-  font-family: Arial, Helvetica, sans-serif
- 
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar a {
@@ -62,11 +68,10 @@ a {
   outline: none;
   color: rgb(255, 255, 255);
   padding:18px 18px;
-  
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  margin-left: 100px;
+  margin-left: 130px;
 }
 
 .dropdown:hover .dropbtn {
@@ -96,10 +101,10 @@ a {
   display: none;
   position: absolute;
   background-color: rgba(194, 138, 26,0.5);
-  min-width: 105.5px;
+  min-width: 105px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  margin-left: 100px;
+  margin-left: 130px;
   border-radius: 0px 0px 10px 10px;
   text-shadow: 1px 1px 1px rgba(75, 74, 74, 0.231);
 }
@@ -116,7 +121,8 @@ a {
 }
 
 #d20Result {
-  font-size: 20px;
+  font-size: 22px;
+  text-decoration:solid;
   float: none;
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -151,13 +157,53 @@ a {
 }
 
 
-/*FONTS*/
+
+
+
+
+/*INDEX*/
+
+
+
+.newFeaturesBox {
+  color:black;
+  background-color: rgba(50, 50, 50, 0.288);
+  margin-top: 60px;
+  margin-left: 30px;
+  max-width: 500px;
+  border-radius: 3px;
+  padding-left: 8px;
+  padding-right: 10px;
+  text-shadow: 1px 1px 1px rgba(121, 120, 120, 0.5);
+  text-align: center;
+}
+
+.newFeaturesBox {
+  animation-duration: 1.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.8s;
+  animation-fill-mode: backwards;
+}
+
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
 h1 {
   color: rgb(206, 162, 19);
   font-size: 60px;
-  text-shadow: 1px 2px 5px rgba(47, 46, 46, 0.856);
+  text-shadow: 1px 2px 5px rgba(47, 46, 46, 0.454);
   margin-bottom: 20px;
   margin-left: 65px;
+  margin-top: 5%;
 }
 
 
@@ -174,18 +220,6 @@ h1 {
   text-shadow: 2px 1px 1px 5px rgba(121, 120, 120, 0.5);
 }
 
-.newFeaturesBox {
-  color:black;
-  background-color: rgba(50, 50, 50, 0.288);
-  margin-top: 60px;
-  margin-left: 30px;
-  max-width: 500px;
-  border-radius: 3px;
-  padding-left: 8px;
-  padding-right: 10px;
-  text-shadow: 1px 1px 1px rgba(121, 120, 120, 0.5);
-  text-align: center;
-}
 .newFeaturesBox p {
   color:black;
   text-shadow: 0px 0px 5px rgb(166, 161, 161);
@@ -218,8 +252,41 @@ h1 {
 
 
 
+/*GALLERY*/
+
+.gallery-header {
+  font-size: 24px;;
+  border: solid 5px;
+  border-color:rgb(110, 90, 60);
+  border-bottom-color:rgb(93, 76, 49) ;
+  border-top-color: rgb(132, 108, 73);
+  border-right-color:rgb(123, 101, 67) ;
+  min-width: 260px;
+  padding: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: rgba(190, 173, 121, 0.404);
+  color:rgb(31, 30, 30);
+  text-shadow: 1px 1px 3px rgba(171, 165, 165, 0.731);
+  margin-top: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+
+.gallery-header-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+
 
 /*FORMS*/
+
+
+
+
 
 
 .char-image-large img {
@@ -257,7 +324,7 @@ h1 {
   padding-right: 20px;
   width: 300px;
   height: 470px;
-  /* overflow: scroll */
+  
 }
 .overFlowText {
   overflow: scroll;
@@ -267,6 +334,14 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
+  height: 600px;
+  overflow:scroll;
+  border: 2px solid rgba(202, 159, 101, 0.436);
+  background-color: rgba(220, 198, 150, 0.21);
+  padding: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .char-info-all-chars {
@@ -421,6 +496,8 @@ form button:hover {
 
 #editor-form {
   background-color: rgba(253, 223, 179, 0.5);
+  display: flex;
+  justify-content: center;
 }
 #editor-form input{
   margin: 5px;
@@ -443,7 +520,7 @@ form button:hover {
 }
 .delete-button {
   padding: 0px;
-  margin-top: 0px;
+  margin-top: 40px;
 }
 .delete-form {
   background-color: rgba(253, 223, 179, 0.5);
@@ -455,6 +532,7 @@ form button:hover {
 }
 #editor-form label {
   color:black;
+ 
 }
 
 h2 {
@@ -467,7 +545,7 @@ h2 {
   justify-content: center;
 }
 
-#myPageTopP {
+#myPageTop {
   font-size: 18px;
   margin-top: 60px;
   margin-bottom:25px;
@@ -476,26 +554,72 @@ h2 {
   margin-top: 40px;
   color: rgb(197, 171, 2);
 }
+
+
+
 .form1 {
   display: flex;
   justify-content: center;
+  font-size: 16px;
+  margin-top: 30px;
+  color:rgb(48, 46, 46);
+  text-shadow: 2px 1px 5px rgba(219, 216, 216, 0.953);
+  margin-bottom: 25px;
 }
+
 .form2{
   display: flex;
   justify-content: space-around;
+  font-size: 16px;
+  color:rgb(48, 46, 46);
+  text-shadow: 2px 1px 5px rgba(219, 216, 216, 0.953)
 }
 
+.form4 {
+  font-size: 16px;
+  color:rgb(48, 46, 46);
+  text-shadow: 2px 1px 5px rgba(219, 216, 216, 0.953)
+}
+
+.form5 {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.form6 {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+
 .form-race {
-  width: 200px;
-  height: 25px;
+  width: 324.5px;
+  height: 31px;
   text-align: center;
   margin-bottom: 30px;
-  margin-top:5px;
+  margin-top:10px;
+  font-size: 14px;
+  color:rgb(48, 46, 46);
+  
 }
 .form-name {
   width: 325px;
-  margin-top: 5px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color:rgb(48, 46, 46);
+  
 }
+
+#save-edit {
+  padding-left: 108px;
+  padding-right: 108px;
+  margin-top: 0px;
+}
+
+
 
 #fileUpload {
   padding-left: 115px;
@@ -509,6 +633,7 @@ h2 {
   padding-top:0px;
   margin-top: 0;
   margin-bottom: 0;
+
 }
 
 .img-small {
@@ -517,13 +642,20 @@ h2 {
 #creator-form {
   background-color: rgba(253, 223, 179, 0.5);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .textArea {
   margin-top: 5px;
+  min-width: 320px;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-around;
+  min-height: 80px;
 }
 
-.diceTab {
-  display: flex;
-  flex-direction: row;
+
+#profile-char-blocks {
+  border: none;
+  background: none;
 }
+
