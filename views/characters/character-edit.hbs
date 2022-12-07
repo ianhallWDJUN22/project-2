@@ -66,12 +66,14 @@
             {{#if errorMessage}}
             <p class="error-message">{{errorMessage}}</p>
             {{/if}}
+        </form>
+
             <div class="delete-button">
                 <form class="delete-form" action="/characters/{{character._id}}/delete" method="POST">
                     <button id="update-delete" type="submit">Delete Character</button>
                 </form>
             </div>
-        </form>
+
     </div>
 </div>
 <style>
