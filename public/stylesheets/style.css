@@ -71,7 +71,7 @@ a {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  margin-left: 130px;
+  margin-left: 200px;
 }
 
 .dropdown:hover .dropbtn {
@@ -104,7 +104,7 @@ a {
   min-width: 105px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  margin-left: 130px;
+  margin-left: 200px;
   border-radius: 0px 0px 10px 10px;
   text-shadow: 1px 1px 1px rgba(75, 74, 74, 0.231);
 }
@@ -181,7 +181,7 @@ a {
 .newFeaturesBox {
   animation-duration: 1.5s;
   animation-name: animate-fade;
-  animation-delay: 0.8s;
+  animation-delay: 2s;
   animation-fill-mode: backwards;
 }
 
@@ -282,6 +282,53 @@ h1 {
 
 
 
+
+/*USER PAGE*/
+
+.user-header {
+  font-size: 24px;;
+  border: solid 5px;
+  border-color:rgb(110, 90, 60);
+  border-bottom-color:rgb(93, 76, 49) ;
+  border-top-color: rgb(132, 108, 73);
+  border-right-color:rgb(123, 101, 67) ;
+  width: 260px;
+  padding: 6px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  background-color: rgba(190, 173, 121, 0.404);
+  color:rgb(48, 46, 46);
+  text-shadow: 1px 1px 3px rgba(171, 165, 165, 0.731);
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+}
+
+.userPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.myPageTop {
+  margin-left: 80%;
+  margin-top: 50px;
+  color:rgb(36, 34, 34);
+  text-shadow: -1px 1px 4px rgba(171, 165, 165, 0.783);
+}
+
+.createNewChar {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  margin-top: 20px;
+  text-shadow: 1px 1px 2px rgba(56, 54, 54, 0.841);
+}
+#profile-header-div {
+  margin-bottom: 0px;
+}
+
 /*FORMS*/
 
 
@@ -309,7 +356,7 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 80px;
   margin-left: 10px;
   margin-right: 10px;
   
@@ -335,13 +382,18 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: 600px;
+  height: 480px;
   overflow:scroll;
-  border: 2px solid rgba(202, 159, 101, 0.436);
-  background-color: rgba(220, 198, 150, 0.21);
+  /* border: 2px solid rgba(202, 159, 101, 0.436);
+  background-color: rgba(220, 198, 150, 0.21); */
   padding: 20px;
   margin-left: 15px;
   margin-right: 15px;
+
+  animation-duration: 1s;
+  animation-name: animate-fade;
+  animation-delay: 0.2s;
+  animation-fill-mode: backwards;
 }
 
 .char-info-all-chars {
@@ -657,5 +709,8 @@ h2 {
 #profile-char-blocks {
   border: none;
   background: none;
+  height: 430px;
+  margin-right: 25px;
+  margin-left: 25px;
 }
 
